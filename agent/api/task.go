@@ -314,6 +314,7 @@ func (task *Task) dockerHostConfig(container *Container, dockerContainerMap map[
 		Binds:        binds,
 		PortBindings: dockerPortMap,
 		VolumesFrom:  volumesFrom,
+		NetworkMode: 	"host",
 	}
 
 	if container.DockerConfig.HostConfig != nil {
